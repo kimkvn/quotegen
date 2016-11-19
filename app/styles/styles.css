@@ -1,16 +1,26 @@
 .photo-bg {
   position: absolute; }
 
+.photo-filter {
+  background: grey;
+  height: 100%;
+  opacity: 0.3;
+  position: fixed;
+  width: 100%; }
+
 .quote-box {
-  position: relative;
-  height: 100ex; }
+  position: fixed;
+  height: 100%;
+  width: 100%; }
   .quote-box .quote-bg {
+    border: 1px solid purple;
     background: grey;
     display: block;
-    height: 40%;
     opacity: 0.4;
     position: absolute;
     width: 100%; }
   .quote-box .quote-wrapper {
-    color: white;
-    position: relative; }
+    border: 1px solid red;
+    position: relative;
+    margin: 0 auto;
+    padding: 100px; }
