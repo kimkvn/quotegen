@@ -1,26 +1,38 @@
 .photo-bg {
-  position: absolute; }
-
-.photo-filter {
-  background: grey;
-  height: 100%;
-  opacity: 0.3;
-  position: fixed;
-  width: 100%; }
+  position: absolute;
+  top: 0; }
+  .photo-bg .photo-wrap {
+    position: relative; }
+  .photo-bg .photo-filter {
+    border: 1px solid green;
+    background: grey;
+    height: 100%;
+    opacity: 0.4;
+    position: relative;
+    width: 100%; }
 
 .quote-box {
-  position: fixed;
   height: 100%;
+  margin: 10ex auto 0 auto;
+  max-width: 40em;
   width: 100%; }
-  .quote-box .quote-bg {
-    border: 1px solid purple;
-    background: grey;
-    display: block;
-    opacity: 0.4;
-    position: absolute;
-    width: 100%; }
   .quote-box .quote-wrapper {
     border: 1px solid red;
+    background: rgba(32, 32, 32, 0.5);
+    color: white;
     position: relative;
     margin: 0 auto;
-    padding: 100px; }
+    padding: 5em; }
+    .quote-box .quote-wrapper .author {
+      text-align: right;
+      text-transform: uppercase; }
+
+.btn-wrap {
+  position: relative; }
+  .btn-wrap button {
+    border: none;
+    background: black;
+    color: white; }
+    .btn-wrap button:hover {
+      background: white;
+      color: black; }

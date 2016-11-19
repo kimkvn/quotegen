@@ -1,33 +1,59 @@
 .photo-bg{
   position: absolute;
-}
-.photo-filter{
-  background: grey;
-  height: 100%;
-  opacity: 0.3;
-  position: fixed;
-  width: 100%;
-}
-.quote-box{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  .quote-bg{
-    border: 1px solid purple;
+  top: 0;
+
+  .photo-wrap{
+    position: relative;
+  }
+  .photo-filter{
+    border: 1px solid green;
 
     background: grey;
-    display: block;
-    //height: 40%;
+    height: 100%;
     opacity: 0.4;
-    position: absolute;
+    position: relative;
     width: 100%;
   }
+
+}
+
+.quote-box{
+  height: 100%;
+  margin: 10ex auto 0 auto;
+  max-width: 40em;
+  width: 100%;
+  // .quote-bg{
+  //   border: 1px solid purple;
+  //
+  //   display: block;
+  //   height: 50%;
+  //   position: absolute;
+  //   width: 100%;
+  // }
   .quote-wrapper{
     border: 1px solid red;
-
-    //color: white;
+    background: rgba(32, 32, 32, 0.5);
+    color: white;
     position: relative;
     margin: 0 auto;
-    padding: 100px;
+    padding: 5em;
+
+    .author{
+      text-align: right;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.btn-wrap{
+  position: relative;
+  button{
+    border: none;
+    background: black;
+    color: white;
+    &:hover{
+      background: white;
+      color: black;
+    }
   }
 }
