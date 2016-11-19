@@ -53,7 +53,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function(){
-  gulp.watch('**.scss', ['sass']);
+  gulp.watch('app/scss/styles.scss', ['sass']);
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('app/**/*.js', browserSync.reload);
   // repeat above line for other watchers!

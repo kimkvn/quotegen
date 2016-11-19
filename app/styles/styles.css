@@ -1,2 +1,16 @@
-div {
-  color: blue; }
+.photo-bg {
+  position: absolute; }
+
+.quote-box {
+  position: relative;
+  height: 100ex; }
+  .quote-box .quote-bg {
+    background: grey;
+    display: block;
+    height: 40%;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%; }
+  .quote-box .quote-wrapper {
+    color: white;
+    position: relative; }
