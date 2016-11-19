@@ -1,0 +1,24 @@
+{
+  "name": "quotegen",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp project - build a random quote generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimkvn/quotegen.git"
+  },
+  "author": "Kevin Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimkvn/quotegen/issues"
+  },
+  "homepage": "https://github.com/kimkvn/quotegen#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
