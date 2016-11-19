@@ -46,14 +46,14 @@ gulp.task('browserSync', function(){
 gulp.task('sass', function(){
   return gulp.src('app/scss/styles.scss')
     .pipe(sass()) //using gulp sass
-    .pipe(gulp.dest('dist/styles/styles.css'))
+    .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function(){
-  gulp.watch('*.scss', ['sass']);
+  gulp.watch('**.scss', ['sass']);
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('app/**/*.js', browserSync.reload);
   // repeat above line for other watchers!
