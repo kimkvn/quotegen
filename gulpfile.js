@@ -44,16 +44,16 @@ gulp.task('browserSync', function(){
 
 
 gulp.task('sass', function(){
-  return gulp.src('sass/styles.scss')
+  return gulp.src('app/scss/styles.scss')
     .pipe(sass()) //using gulp sass
-    .pipe(gulp.dest('styles'))
+    .pipe(gulp.dest('dist/styles/styles.css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function(){
-  gulp.watch('sass/*.scss', ['sass']);
+  gulp.watch('*.scss', ['sass']);
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('app/**/*.js', browserSync.reload);
   // repeat above line for other watchers!
