@@ -21,6 +21,9 @@ $(document).ready(function(){
     }).done(function(data){
       $('.quote').html(data.quote);
       $('.author').html(data.author);
+
+      $('.twitter-share-button').attr('data-text', data.quote);
+
       console.log(data)
     })
 
