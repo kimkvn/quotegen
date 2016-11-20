@@ -1,12 +1,11 @@
 $(document).ready(function(){
 
-  var quoteAPI = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous';
-  var data;
+  var quoteAPI = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies';
 
-  /* AJAX GET method */
   function getQuote(){
+    /* AJAX GET method */
     $.ajax({
-      url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
+      url: quoteAPI,
       type: 'GET',
       data: {},
       dataType: 'json',
@@ -24,6 +23,7 @@ $(document).ready(function(){
       $('.author').html(data.author);
       console.log(data)
     })
+
   };
 
   getQuote();

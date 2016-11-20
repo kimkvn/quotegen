@@ -1,25 +1,40 @@
 .photo-bg{
-  position: absolute;
-  top: 0;
+
+  background: black;
+
+  background: url(https://source.unsplash.com/random) no-repeat center;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+
+  // left: 50%;
+  // position: absolute;
+  // top: 0;
+  // transform: translateX(-50%);
 
   .photo-wrap{
-    position: relative;
-  }
-  .photo-filter{
-    border: 1px solid green;
 
-    background: grey;
-    height: 100%;
-    opacity: 0.4;
     position: relative;
-    width: 100%;
+    text-align: center;
   }
+  // .photo-filter{
+  //   border: 1px solid green;
+  //
+  //   background: grey;
+  //   height: 100%;
+  //   opacity: 0.4;
+  //   position: relative;
+  //   width: 100%;
+  // }
 
 }
 
 .quote-box{
   height: 100%;
-  margin: 10ex auto 0 auto;
+  padding: 20ex 0 0 0;
+  margin: 0 auto;
   max-width: 40em;
   width: 100%;
   // .quote-bg{
@@ -32,7 +47,7 @@
   // }
   .quote-wrapper{
     border: 1px solid red;
-    background: rgba(32, 32, 32, 0.5);
+    background: rgba(32, 32, 32, 0.8);
     color: white;
     position: relative;
     margin: 0 auto;
@@ -46,11 +61,14 @@
 }
 
 .btn-wrap{
+  padding-top: 2.5ex;
   position: relative;
+  text-align: center;
   button{
     border: none;
     background: black;
     color: white;
+    padding: 2ex 2em;
     &:hover{
       background: white;
       color: black;
