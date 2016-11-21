@@ -1,10 +1,21 @@
 .photo-bg{
-  background: url(https://source.unsplash.com/category/nature) no-repeat center;
   background-size: cover;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
+  left: -50%;
   position: fixed;
+  top: -50%;
+  img{
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 .quote-box{
@@ -19,11 +30,18 @@
     border: 1px solid white;
     position: relative;
     margin: 0 auto;
-    padding: 5em 5em 3em 5em;
+    padding: 5em 4em 3em 6.5em;
 
-    h1, .author{
+    .quote-mark{
+      position: absolute;
+      color: white;
+      left: 30px;
+      font-size: 7em;
+      top: 30px;
+    }
+
+     .quote-mark, h1, .author{
       color: transparent;
-      //text-shadow: 0 0 0 rgba(255, 255, 255, 1);
       transition: color 2s, text-shadow 0.5s;
     }
 
@@ -71,4 +89,28 @@
     right: 0;
   }
 
+}
+.credits{
+  div{
+    bottom: 0;
+    color: white;
+    // left: 50%;
+    padding: 0 0 1em 0;
+    position: absolute;
+    // transform: translateX(-50%);
+
+    a{
+      font-weight: bold;
+      text-decoration: underline;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+  .made-by{
+    left: 1em;
+  }
+  .photos-by{
+    right: 1em;
+  }
 }

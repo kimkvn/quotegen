@@ -6,14 +6,16 @@
 </head>
   <body>
 
-    <div class="photo-bg"></div>
+    <div class="photo-bg">
+      <img src=""/>
+    </div>
 
     <section class="quote-box">
       <div class="quote-wrapper">
-        <blockquote>
-          <h1 class="quote">
-          </h1>
-        </blockquote>
+        <span class="quote-mark">&ldquo;</span>
+        <h1 class="quote">
+        </h1>
+
         <div class="author">
         </div>
       </div>
@@ -23,9 +25,18 @@
       </div>
 
     </section>
+    <section class="credits">
+      <div class="made-by">
+        Made with coffee by <a href="https://kimkvn.github.io" target="_blank">Kevin Kim</a>
+      </div>
+      <div class="photos-by">
+        Photos powered by <a href="https://pixabay.com/">Pixabay</a>
+      </div>
+    </section>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="app/getQuote.js"></script>
+<script src="app/getAssets.js"></script>
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
