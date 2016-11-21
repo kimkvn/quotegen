@@ -22,9 +22,16 @@ $(document).ready(function(){
       $('.quote').html(data.quote);
       $('.author').html(data.author);
 
-      $('.twitter').append("<a class='twitter-share-button' href='https://twitter.com/intent/tweet' data-text=\""+data.quote+"\" data-url=0></a>");
+
+
+      $('.twitter').append("<a class='twitter-share-button' href='https://twitter.com/intent/tweet' data-text=\"" + data.quote + "\" data-url=0></a>");
       twttr.widgets.load();
-      //$('.twitter-share-button').attr('href', 'https://twitter.com/intent/tweet/?text='+data.quote);
+
+      if($('.twitter-share-button').length > 1){
+        $('.twitter-share-button')[0].remove();
+      }
+
+      // $('twitter-share-button')[0].remove();
 
       console.log(data)
     })
