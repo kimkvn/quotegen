@@ -12,6 +12,10 @@ $(document).ready(function(){
     data: {},
     dataType: 'json',
     success: function(data){
+      var photoURL = data.hits[randNum].webformatURL;
+      $('.photo-bg img').attr('src', photoURL);
+
+
       console.log(data.hits[randNum].webformatURL);
     },
     error: function(err){
