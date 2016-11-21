@@ -4,18 +4,21 @@
 **Objective**: Build an Random Quote Generator similar to the one in this [CodePen](https://codepen.io/FreeCodeCamp/full/ONjoLe/)
 
 User Story: I can click a button to show me a new random quote.
+
 User Story: I can press a button to tweet out a quote.
 
 **Built with**:
-  Gulp
-  Sass 
-  jQuery
 
-  Javascript
-  HTML
-  CSS
+  * Gulp
+  * Sass
+  * jQuery
+
+  * Javascript
+  * HTML
+  * CSS
 
 **Developer notes**:
+
 The first step was to find a quotes API. I decided to use [this one found in the Mashape API marketplace](https://market.mashape.com/andruxnet/random-famous-quotes), because it was easy and free to use.
 
 The Mashape documentation was helpful because it provides example JS code of making an API call. I elected to follow that instead of the getJSON examples in the previous FCC lessons.
