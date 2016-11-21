@@ -22,7 +22,9 @@ $(document).ready(function(){
       $('.quote').html(data.quote);
       $('.author').html(data.author);
 
-      $('.twitter-share-button').attr('data-text', data.quote);
+      $('.twitter').append("<a class='twitter-share-button' href='https://twitter.com/intent/tweet' data-text=\""+data.quote+"\" data-url=0></a>");
+      twttr.widgets.load();
+      //$('.twitter-share-button').attr('href', 'https://twitter.com/intent/tweet/?text='+data.quote);
 
       console.log(data)
     })
