@@ -1,15 +1,12 @@
 $(document).ready(function(){
 
   var quoteAPI = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies';
-
   var photoAPI = 'https://pixabay.com/api/';
   var photoKey = '3816165-f45dd5d04573ce59bcdfc3e48';
-  var photoData;
 
 
-
+  /* GET request to the quotes API */
   function getQuote(){
-    /* AJAX GET method */
     $.ajax({
       url: quoteAPI,
       type: 'GET',
@@ -48,6 +45,7 @@ $(document).ready(function(){
     });
   };
 
+  /* GET request to the photos api */
   function getPhoto(){
     $.ajax({
       url: photoAPI+'?key='+photoKey+'&q=nature+landscape&image_type=photo&per_page=50',
@@ -71,10 +69,16 @@ $(document).ready(function(){
     });
   };
 
-
+  /* Gotta initiate the AJAX requests upon page load. */
   getQuote();
   getPhoto();
 
+
+  /*
+    Click handler for Get New Quote button.
+    Initiates text transition effects and new GET
+    requests to the quotes and photos apis.
+  */
   $('.new-quote').on('click', function(){
     $('h1, .author, .quote-mark').removeClass('focus');
     $('h1, .author, .quote-mark').addClass('blur');
