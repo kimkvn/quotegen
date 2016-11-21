@@ -90,20 +90,27 @@
   }
 
 }
+.credits{
+  div{
+    bottom: 0;
+    color: white;
+    // left: 50%;
+    padding: 0 0 1em 0;
+    position: absolute;
+    // transform: translateX(-50%);
 
-.made-by{
-  bottom: 0;
-  color: white;
-  left: 50%;
-  padding: 0 0 1em 0;
-  position: absolute;
-  transform: translateX(-50%);
-
-  a{
-    font-weight: bold;
-    text-decoration: underline;
-    &:hover{
-      color: white;
+    a{
+      font-weight: bold;
+      text-decoration: underline;
+      &:hover{
+        color: white;
+      }
     }
+  }
+  .made-by{
+    left: 1em;
+  }
+  .photos-by{
+    right: 1em;
   }
 }

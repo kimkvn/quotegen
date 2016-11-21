@@ -34,8 +34,6 @@ $(document).ready(function(){
         $('h1, .author, .quote-mark').addClass('focus');
       }, 1000)
 
-
-
       /* injecting the Tweet button */
       $('.twitter').append("<a class='twitter-share-button' href='https://twitter.com/intent/tweet' data-text=\"" + data.quote + "\" data-url=0></a>");
 
@@ -58,10 +56,14 @@ $(document).ready(function(){
       dataType: 'json',
       success: function(data){
 
+        /* RNG, max = 50 because that's the parameter set in the url of this request */
         var randNum = Math.floor(Math.random()*(50 - 0 + 1));
 
+        /* setting the img element to the randomized photo URL */
         var photoURL = data.hits[randNum].webformatURL;
+
         $('.photo-bg img').attr('src', photoURL);
+
       },
       error: function(err){
         alert(err);

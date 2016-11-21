@@ -68,15 +68,19 @@
     position: absolute;
     right: 0; }
 
-.made-by {
+.credits div {
   bottom: 0;
   color: white;
-  left: 50%;
   padding: 0 0 1em 0;
-  position: absolute;
-  transform: translateX(-50%); }
-  .made-by a {
+  position: absolute; }
+  .credits div a {
     font-weight: bold;
     text-decoration: underline; }
-    .made-by a:hover {
+    .credits div a:hover {
       color: white; }
+
+.credits .made-by {
+  left: 1em; }
+
+.credits .photos-by {
+  right: 1em; }
