@@ -24,8 +24,8 @@ $(document).ready(function(){
       window.setTimeout(function(){
         $('.quote').html(data.quote);
         $('.author').html('- '+data.author);
-        $('h1, .author').removeClass('blur');
-        $('h1, .author').addClass('focus');
+        $('h1, .author, .quote-mark').removeClass('blur');
+        $('h1, .author, .quote-mark').addClass('focus');
       }, 1000)
 
 
@@ -47,8 +47,8 @@ $(document).ready(function(){
   getQuote();
 
   $('.new-quote').on('click', function(){
-    $('h1, .author').removeClass('focus');
-    $('h1, .author').addClass('blur');
+    $('h1, .author, .quote-mark').removeClass('focus');
+    $('h1, .author, .quote-mark').addClass('blur');
     getQuote();
   });
 

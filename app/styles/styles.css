@@ -17,8 +17,14 @@
     border: 1px solid white;
     position: relative;
     margin: 0 auto;
-    padding: 5em 5em 3em 5em; }
-    .quote-box .quote-wrapper h1, .quote-box .quote-wrapper .author {
+    padding: 5em 5em 3em 6.5em; }
+    .quote-box .quote-wrapper .quote-mark {
+      position: absolute;
+      color: white;
+      left: 30px;
+      font-size: 7em;
+      top: 30px; }
+    .quote-box .quote-wrapper .quote-mark, .quote-box .quote-wrapper h1, .quote-box .quote-wrapper .author {
       color: transparent;
       transition: color 2s, text-shadow 0.5s; }
     .quote-box .quote-wrapper .author {
