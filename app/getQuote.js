@@ -19,40 +19,37 @@ $(document).ready(function(){
         xhr.setRequestHeader('X-Mashape-Authorization', "dwT2puf9UhmshZ9HCTST3CohCRrQp1NZTnBjsnRX41vK4WGw0f")
       }
     }).done(function(data){
-      $('.quote').html(data.quote);
-      $('.author').html(data.author);
+
+      /* inserting data from the API */
+      window.setTimeout(function(){
+        $('.quote').html(data.quote);
+        $('.author').html('- '+data.author);
+        $('h1, .author').removeClass('blur');
+        $('h1, .author').addClass('focus');
+      }, 1000)
 
 
 
+      /* injecting the Tweet button */
       $('.twitter').append("<a class='twitter-share-button' href='https://twitter.com/intent/tweet' data-text=\"" + data.quote + "\" data-url=0></a>");
+
+      /* necessary step for the twitter script to recognize the updated data*/
       twttr.widgets.load();
 
+      /* preventing a cluster of Tweet buttons from populating */
       if($('.twitter-share-button').length > 1){
         $('.twitter-share-button')[0].remove();
       }
 
-      // $('twitter-share-button')[0].remove();
-
-      console.log(data)
-    })
-
+    });
   };
 
   getQuote();
 
   $('.new-quote').on('click', function(){
+    $('h1, .author').removeClass('focus');
+    $('h1, .author').addClass('blur');
     getQuote();
   });
-
-
-  /* jQuery $.get method */
-  // var quoteAPI = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies'
-  // $.getJSON(quoteAPI, function(){
-  //   X-Mashape-Key: 'dwT2puf9UhmshZ9HCTST3CohCRrQp1NZTnBjsnRX41vK4WGw0f',
-  //   format: "json"
-  // }).done(function(data){
-  //   $('body').html(JSON.stringify(data));
-  // });
-
 
 });
