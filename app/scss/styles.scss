@@ -90,3 +90,20 @@
   }
 
 }
+
+.made-by{
+  bottom: 0;
+  color: white;
+  left: 50%;
+  padding: 0 0 1em 0;
+  position: absolute;
+  transform: translateX(-50%);
+
+  a{
+    font-weight: bold;
+    text-decoration: underline;
+    &:hover{
+      color: white;
+    }
+  }
+}
