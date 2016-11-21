@@ -2,6 +2,12 @@ $(document).ready(function(){
 
   var quoteAPI = 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies';
 
+  var photoAPI = 'https://pixabay.com/api/';
+  var photoKey = '3816165-f45dd5d04573ce59bcdfc3e48';
+  var photoData;
+
+
+
   function getQuote(){
     /* AJAX GET method */
     $.ajax({
@@ -44,12 +50,34 @@ $(document).ready(function(){
     });
   };
 
+  function getPhoto(){
+    $.ajax({
+      url: photoAPI+'?key='+photoKey+'&q=nature+landscape&image_type=photo&per_page=50',
+      type: 'GET',
+      data: {},
+      dataType: 'json',
+      success: function(data){
+
+        var randNum = Math.floor(Math.random()*(50 - 0 + 1));
+
+        var photoURL = data.hits[randNum].webformatURL;
+        $('.photo-bg img').attr('src', photoURL);
+      },
+      error: function(err){
+        alert(err);
+      }
+    });
+  };
+
+
   getQuote();
+  getPhoto();
 
   $('.new-quote').on('click', function(){
     $('h1, .author, .quote-mark').removeClass('focus');
     $('h1, .author, .quote-mark').addClass('blur');
     getQuote();
+    new getPhoto();
   });
 
 });
